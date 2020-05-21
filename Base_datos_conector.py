@@ -33,7 +33,7 @@ TABLES['Entrada'] = (
     "  carro varchar(30) NOT NULL,"
     "  longitud varchar(30) NOT NULL,"
     "  latitud varchar(30) NOT NULL,"
-    #"  delegacion varchar(30) NOT NULL,"
+    "  alcaldia varchar(30) NOT NULL,"
     "  PRIMARY KEY (id)"
     ") ENGINE=InnoDB")
 
@@ -63,7 +63,7 @@ for name, ddl in TABLES.items():
         print("OK")
 
 
-add_Entrada = ("INSERT INTO Entrada (id,fecha,carro,longitud,latitud) VALUES(%(id)s, %(fecha)s, %(carro)s, %(longitud)s, %(latitud)s)")#, %(delegacion)s)") recordar poner en est linea delegacion
+add_Entrada = ("INSERT INTO Entrada (id,fecha,carro,longitud,alcaldia,latitud) VALUES(%(id)s, %(fecha)s, %(carro)s, %(longitud)s, %(alcaldia)s, %(latitud)s)")
 # Leo mi archivo de acumulados y los guardo en data, lo hago para no tener roblemas con json
 f = open('datos_acumulados2.json', 'r')
 data = json.load(f)
@@ -78,7 +78,7 @@ for i in range(len(data['Entrada'])):
         'carro': data['Entrada'][i]['carro'],
         'longitud': data['Entrada'][i]['longitud'],
         'latitud': data['Entrada'][i]['latitud'],
-        #'delegacion': data['Entrada'][i]['delegacion'],
+        'alcaldia': data['Entrada'][i]['alcaldia'],
     }
     cursor.execute(add_Entrada,data_Entrada)
     cnx.commit()
