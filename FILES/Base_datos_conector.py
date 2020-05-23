@@ -16,8 +16,11 @@ def create_database(cursor,cnx):
 
 config = {
     'user': 'root',
-    'password': 'mariooiram',
-    'host': '127.0.0.1',
+    'password': 'root',
+    ## Nos comunicamos con el servicio mysql_db dentro del docker:
+    'host': 'mysql_db',
+    #El puerto es:
+    'port':'3306',
     'auth_plugin' : 'mysql_native_password',
     'raise_on_warnings': True,
 }
