@@ -2,4 +2,6 @@ requests
 shapely
 mysql-connector
 mysql-connector-python
-PyMySQL
+flask
+flask-mysqldb
+

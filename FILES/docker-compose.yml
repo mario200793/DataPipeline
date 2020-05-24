@@ -10,6 +10,8 @@ services:
       tail -f /dev/null
     networks:
       - some-net
+    ports:
+      - "${localhost:-127.0.0.1}:8080:80"
   
   mysql_db:
     image: mysql
