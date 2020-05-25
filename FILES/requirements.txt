@@ -3,5 +3,5 @@ shapely
 mysql-connector
 mysql-connector-python
 flask
-flask-mysqldb
+
 

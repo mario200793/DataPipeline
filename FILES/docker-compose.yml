@@ -10,8 +10,9 @@ services:
       tail -f /dev/null
     networks:
       - some-net
+    # Para entrar a flask, entramos con 0.0.0.0:8082 desde afuera del docker
     ports:
-      - "${localhost:-127.0.0.1}:8080:80"
+      - 8082:4000
   
   mysql_db:
     image: mysql

@@ -32,7 +32,7 @@ TABLES = {}
 TABLES['Entrada'] = (
     "CREATE TABLE Entrada ("
     "  id varchar(100) NOT NULL,"
-    "  fecha varchar(30) NOT NULL,"
+    "  fecha datetime(6) NOT NULL,"
     "  carro varchar(30) NOT NULL,"
     "  longitud varchar(30) NOT NULL,"
     "  latitud varchar(30) NOT NULL,"
@@ -72,7 +72,7 @@ f = open('datos_acumulados2.json', 'r')
 data = json.load(f)
 #Cierro
 f.close()
-print(data)
+#print(data)
 ## Hago insert a la base de datos
 for i in range(len(data['Entrada'])):
     data_Entrada = {

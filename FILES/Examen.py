@@ -35,11 +35,6 @@ if __name__ == '__main__':
         p1 = Point(-103.48899841308594, 19.437299728393555)
         p1 = Point(-99.12100219726562, 19.49329948425293)
         # Cin within verifico si esa posicion(punto) se encuentra en el poligono
-        '''
-        for i in range(len(poly)):
-            if p1.within(poly[i]) == True:
-                print('Si esta',nombre_alcaldia[i])
-        '''
 
 # Parte de guardar datos
 if __name__ == '__main__':
